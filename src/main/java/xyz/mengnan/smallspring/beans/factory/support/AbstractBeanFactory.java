@@ -4,6 +4,9 @@ import xyz.mengnan.smallspring.beans.BeansException;
 import xyz.mengnan.smallspring.beans.factory.BeanFactory;
 import xyz.mengnan.smallspring.beans.factory.config.BeanDefinition;
 
+/**
+ * 提供了获取Bean模版的能力和通过模版实例化Bean的能力
+ */
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
 
     @Override
@@ -12,7 +15,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
     }
 
     @Override
-    public <T> T getBean(String name, String... args) throws BeansException {
+    public <T> T getBean(String name, Object... args) throws BeansException {
         return doGetBean(name, args);
     }
 

@@ -1,5 +1,7 @@
 package xyz.mengnan.smallspring.beans.factory.support;
 
+import xyz.mengnan.smallspring.beans.factory.config.SingletonBeanRegistry;
+
 import java.util.HashMap;
 import java.util.Map;
 
