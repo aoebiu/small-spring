@@ -4,6 +4,9 @@ import xyz.mengnan.smallspring.beans.BeansException;
 import xyz.mengnan.smallspring.core.io.Resource;
 import xyz.mengnan.smallspring.core.io.ResourceLoader;
 
+/**
+ * bean容器定义读取类
+ */
 public interface BeanDefinitionReader {
 
     BeanDefinitionRegistry getRegistry();

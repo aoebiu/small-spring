@@ -10,10 +10,10 @@ public class ClassUtils {
             cl = Thread.currentThread().getContextClassLoader();
         }
         catch (Throwable ex) {
-            // Cannot access thread context ClassLoader - falling back to system class loader...
+            // 异常直接捕捉后返回本类的类加载器
         }
         if (cl == null) {
-            // No thread context class loader -> use class loader of this class.
+            // 直接返回本类的类加载器
             cl = ClassUtils.class.getClassLoader();
         }
         return cl;

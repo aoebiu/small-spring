@@ -3,6 +3,9 @@ package xyz.mengnan.smallspring.beans.factory.support;
 import xyz.mengnan.smallspring.core.io.DefaultResourceLoader;
 import xyz.mengnan.smallspring.core.io.ResourceLoader;
 
+/**
+ * 实现BeanDefinitionReader接口,通过实现该接口实现读取各种配置后装载入bean的能力
+ */
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader {
 
     private final BeanDefinitionRegistry registry;

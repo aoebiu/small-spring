@@ -49,6 +49,22 @@ public class ConfigTest {
     }
 
     /**
+     * properties读取测试
+     */
+    @Test
+    public void loadProperties() throws IOException {
+        Resource resource = resourceLoader.getResource("classpath:small-spring.properties");
+        InputStream inputStream = resource.getInputStream();
+        Properties properties = new Properties();
+        properties.load(inputStream);
+
+        System.out.println("--------------------------------");
+        System.out.println(properties.getProperty("zhangsan.name"));
+        System.out.println(properties.getProperty("zhangsan.age"));
+        System.out.println(properties);
+    }
+
+    /**
      * Xml配置文件导入测试
      */
     @Test
