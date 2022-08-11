@@ -1,5 +1,7 @@
 package xyz.mengnan.smallspring.test.beans;
 
+import xyz.mengnan.smallspring.test.entry.User;
+
 public class UserService {
 
     private String name;
@@ -25,9 +27,11 @@ public class UserService {
     }
 
     public String queryUserInfo() {
-        System.out.println(uid);
         if (userDao != null) {
-            System.out.println("查询到此用户的详细信息" + userDao.queryUserName(uid));
+            User user = userDao.queryUserName(uid);
+            System.out.println("查询到此用户的详细信息" + user);
+
+            this.name = user.getName();
         }
         return name;
     }

@@ -10,6 +10,14 @@ public class User {
         this.name = name;
     }
 
+    public Long getUid() {
+        return uid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "User{" +

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userDao" class="xyz.mengnan.smallspring.test.beans.UserDao"/>
+
+    <bean id="userService" class="xyz.mengnan.smallspring.test.beans.UserService">
+        <property name="uid" value="1"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+</beans>

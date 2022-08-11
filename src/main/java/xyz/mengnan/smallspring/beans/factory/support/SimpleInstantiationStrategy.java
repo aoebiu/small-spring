@@ -20,5 +20,4 @@ public class SimpleInstantiationStrategy implements InstantiationStrategy {
             throw new BeansException("Failed to instantiate '" + clazz.getName() + "；", e);
         }
     }
-
 }

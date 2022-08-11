@@ -10,7 +10,7 @@ import org.junit.Test;
 import xyz.mengnan.smallspring.beans.factory.config.BeanDefinition;
 import xyz.mengnan.smallspring.beans.factory.support.DefaultListableBeanFactory;
 
-public class ApiTest {
+public class BasicTest {
 
     DefaultListableBeanFactory beanFactory;
 

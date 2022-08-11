@@ -18,12 +18,11 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     protected Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException {
         Object bean = null;
         try {
-            bean = createBeanInstance(beanDefinition, beanName, args);
+            bean = createBeanInstance(beanDefinition, beanName, args != null ? args : new Object[0]);
             applyPropertyValues(beanName, bean, beanDefinition);
         } catch (Exception e) {
             throw new BeansException("Instantiation of bean failed", e);
         }
-
         addSingleton(beanName, bean);
         return bean;
     }
@@ -56,7 +55,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         Constructor<?>[] declaredConstructors = beanClass.getDeclaredConstructors();
 
         for (Constructor<?> constructor : declaredConstructors) {
-            if (null != args && constructor.getParameterTypes().length == args.length) {
+            if (constructor.getParameterTypes().length == args.length) {
                 constructorToUse = constructor;
                 break;
             }

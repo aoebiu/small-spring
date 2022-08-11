@@ -16,7 +16,7 @@ public class UserDao {
         hashMap.put("4", new User(4L,"赵八"));
     }
 
-    public Object queryUserName(String uid) {
+    public User queryUserName(String uid) {
         return hashMap.get(uid);
     }
 }
