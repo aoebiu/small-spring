@@ -1,7 +1,5 @@
 package xyz.mengnan.smallspring.core.io;
 
-import xyz.mengnan.smallspring.core.io.Resource;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

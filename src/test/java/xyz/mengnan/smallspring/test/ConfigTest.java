@@ -12,9 +12,7 @@ import xyz.mengnan.smallspring.core.io.DefaultResourceLoader;
 import xyz.mengnan.smallspring.core.io.Resource;
 import xyz.mengnan.smallspring.test.beans.UserService;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
 
 public class ConfigTest {
 
