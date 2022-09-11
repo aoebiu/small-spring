@@ -8,12 +8,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class UrlResource implements Resource{
+public class UrlResource implements Resource {
 
     private final URL url;
 
     public UrlResource(URL url) {
-        Assert.notNull(url,"URL must not be null");
+        Assert.notNull(url, "URL must not be null");
         this.url = url;
     }
 
